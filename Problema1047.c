@@ -11,6 +11,5 @@ int main()
     else
         tempo2-=tempo1;
 
-    
     printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",tempo2/3600,(tempo2%3600)/60);
 }
