@@ -3,18 +3,18 @@
 unsigned long long int fibonacci(int n) /*Funcao fibonacci pra ficar bonitinho*/
 {
     unsigned long long int sequencia[61]; /*Vetor de 61 numeros, de 0 a 60*/
-        for (int i = 0; i <= n; i++) /*Loop que repete ate o numero desejado*/
+    for (int i = 0; i <= n; i++) /*Loop que repete ate o numero desejado*/
+    {
+        if (i==0 || i==1) /*Excecoes para 0 e 1*/
         {
-            if (i==0 || i==1) /*Excecoes para 0 e 1*/
-            {
-                sequencia[i]=i;
-            }
-            else
-            {
-                sequencia[i]=sequencia[i-1]+sequencia[i-2]; /*Regra de fibonacci*/
-            }
+            sequencia[i]=i;
         }
-        return sequencia[n]; /*Retorna o valor do nesimo numero da sequencia*/
+        else
+        {
+            sequencia[i]=sequencia[i-1]+sequencia[i-2]; /*Regra de fibonacci*/
+        }
+    }
+    return sequencia[n]; /*Retorna o valor do nesimo numero da sequencia*/
 }
 
 int main()

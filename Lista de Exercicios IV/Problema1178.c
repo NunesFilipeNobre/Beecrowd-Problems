@@ -2,7 +2,7 @@
 
 int main()
 {
-    double x,n[100]; /*Declara array com 10 elementos*/
+    double x,n[100]; /*Declara array com 100 elementos*/
     scanf("%lf",n); /*Recebe o valor do elemento 0*/
     printf("N[0] = %.4lf\n",n[0]); /*Ja printa o valor inicial*/
     for (int i = 1; i < 100; i++) /*Loop de 99 repeticoes comecando do 1*/

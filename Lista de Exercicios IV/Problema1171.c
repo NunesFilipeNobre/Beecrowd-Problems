@@ -7,7 +7,7 @@ int main()
 
     for (int i = 1; i <= 2000; i++) /*Inicia todos os elementos da array de 1 a 2000 com o valor 0*/
     {
-        contaNum[i]=0; /*Array que conta quantas vezes apareceu um umero i iniciada com o valor 0*/
+        contaNum[i]=0; /*Array que conta quantas vezes apareceu um numero i iniciada com o valor 0*/
     }
     
     for (int i = 0; i < quantNum; i++) /*Loop que repete de acorodo com a quantidade de numeros que serao recebidos*/

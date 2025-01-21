@@ -1,49 +1,38 @@
 #include <stdio.h>
-            /*Entender como usar EOF*/
-int main() /*Solucao errada, testar pegar o maior numero e ir somando com os mais pequenos ate os maiores*/
+#include <stdlib.h>
+
+int main()
 {
-    int n,menorDif=9999999,temp, moduloDif;
-    long long int total=0, x[10000], comparador=0;
+    int n;
+    unsigned long long int total=0, inicial=0, menorDif=9999999999999999;
 
-    while (1)
+    while (scanf("%d",&n)!=EOF)
     {
-        scanf("%d",&n);
-
+        unsigned long long int x[n];
         for (int i = 0; i < n; i++)
         {
-            scanf("%d",&x[i]);
+            scanf("%llu",&x[i]);
             total+=x[i];
         }
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < (n-1); i++)
         {
-            for(int j=0; j < n-1; j++)
+            total-=x[i];
+            inicial+=x[i];
+            if (menorDif>llabs(inicial-total)) /*long long absolute*/
             {
-                if(x[j] > x[j+1])
-                {
-                    temp = x[j];
-                    x[j] = x[j+1];
-                    x[j+1] = temp;
-                }
+                menorDif = llabs(inicial-total);
             }
         }
-        for (int i = 0; i < (n); i++)
+        if (n == 1)
         {
-            if(((total-=x[i])-(comparador+=x[i]))<0)
-            {
-                moduloDif = (-(total)+(comparador));
-            }
-            else
-            {
-                moduloDif = ((total)-(comparador));
-            }
-            if (menorDif>moduloDif)
-            {
-                menorDif = moduloDif;
-            }
+            printf("%llu\n",total);
         }
-        printf("%d\n",menorDif);
-        comparador=0;
+        else
+        {
+            printf("%llu\n",menorDif);
+        }
         total=0;
-        menorDif=9999999;
+        inicial=0;
+        menorDif=9999999999999999;
     }
 }
