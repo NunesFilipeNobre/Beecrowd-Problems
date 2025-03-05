@@ -24,7 +24,7 @@ int main()
         {
             for (int k = 0; k < strlen(cand[j].nome); k++)
             {
-                if (cand[j].nome[k]>cand[j+1].nome[k]) /*Verificar se nome eh menor que outro em indice de caractere ascii (incluindo maiusculas)*/
+                if (cand[j].nome[k]>cand[j+1].nome[k])
                 {
                     strcpy(temp,cand[j].nome);
                     strcpy(cand[j].nome,cand[j+1].nome);

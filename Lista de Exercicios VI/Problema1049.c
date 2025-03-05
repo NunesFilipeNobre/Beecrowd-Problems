@@ -4,7 +4,7 @@
 int main()
 {
     char word[16];
-    scanf("%s",word);
+    scanf(" %s",word);
     if (strcmp(word,"vertebrado")==0)
     {
         scanf(" %s",word);

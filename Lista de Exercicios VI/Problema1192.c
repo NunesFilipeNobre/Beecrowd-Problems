@@ -2,8 +2,8 @@
 
 int main()
 {
-    int casos, num1, num2;
-    char letra, sequencia[4];
+    int casos;
+    char sequencia[4];
     scanf("%d",&casos);
     for (int i = 0; i < casos; i++)
     {
